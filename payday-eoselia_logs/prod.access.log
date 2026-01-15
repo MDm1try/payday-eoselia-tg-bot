@@ -1,0 +1,26 @@
+2026-01-15T18:50:00: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-01-15T18:50:02: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-01-15T18:50:04: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-01-15T18:50:06: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-01-15T18:50:08: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: ⚙️  override existing env vars with { override: true }
+2026-01-15T18:50:10: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-01-15T18:50:12: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-01-15T18:50:13: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-01-15T18:50:15: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-01-15T18:50:17: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-01-15T18:50:19: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-01-15T18:50:21: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-01-15T18:50:23: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-01-15T18:50:25: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-01-15T18:50:27: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-01-15T18:50:29: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-01-15T18:50:31: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-01-15T18:50:33: [dotenv@17.2.3] injecting env (0) from .env.production -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-01-15T18:50:35: [dotenv@17.2.3] injecting env (2) from .env.production -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-01-15T18:50:37: 🤖 Starting bot...
+2026-01-15T18:50:37: Cron jobs started: 10th, 15th, 20th, 23rd reminders
+2026-01-15T18:50:37: Bot payday_eOselia_bot is up and running
+2026-01-15T18:50:58: [dotenv@17.2.3] injecting env (2) from .env.production -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-01-15T18:51:00: 🤖 Starting bot...
+2026-01-15T18:51:00: Cron jobs started: 10th, 15th, 20th, 23rd reminders
+2026-01-15T18:51:00: Bot payday_eOselia_bot is up and running
