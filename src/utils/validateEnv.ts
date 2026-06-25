@@ -7,5 +7,6 @@ export function ValidateEnv() {
     NODE_ENV: str(),
     TELEGRAM_TOKEN: str(),
     TELEGRAM_BOT_USERNAME: str(),
+    CRON_SECRET: str(),
   })
 }

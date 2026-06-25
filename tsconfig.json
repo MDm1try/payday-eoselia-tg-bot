@@ -23,18 +23,9 @@
     "importHelpers": true,
     "baseUrl": "src",
     "skipLibCheck": true,
-    "paths": {
-      "@/*": ["*"],
-      "@config": ["config"],
-      "@types": ["types"],
-      "@constants/*": ["constants/*"],
-      "@utils/*": ["utils/*"],
-      "@libs/*": ["libs/*"],
-
-    },
     "skipDefaultLibCheck": true
   },
   "files": ["globals.d.ts"],
-  "include": ["src/**/*.ts", "src/**/*.json", ".env"],
+  "include": ["api/**/*.ts", "src/**/*.ts", "src/**/*.json", ".env"],
   "exclude": ["node_modules", "src/http", "src/logs"]
 }

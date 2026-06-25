@@ -25,9 +25,9 @@ async function handleCallbackData(ctx: TelegramContext) {
         const messages = [
           emoji('broken_heart'),
           emoji('smiling_face_with_tear'),
-          `Ти вже відкладав цей платіж! Не треба так часто ${emoji('smile')}`,
-          `Стоп-стоп, я вже записав, що ти хочеш нагадати пізніше! Навіщо ще раз? ${emoji('thinking')}`,
-          `Окей, я розумію - ти дуже зайнятий ${emoji('sweat_smile')}`,
+          `Ти вже відкладав цей платіж! Не треба так часто ${emoji('slightly_smiling_face')}`,
+          `Стоп-стоп, я вже записав, що ти хочеш нагадати пізніше! Навіщо ще раз? ${emoji('thinking_face')}`,
+          `Окей, я розумію - ти дуже зайнятий ${emoji('grinning_face_with_sweat')}`,
           `${emoji('shushing_face')}`,
         ]
 
@@ -62,9 +62,9 @@ async function handleCallbackData(ctx: TelegramContext) {
       if (paidClickCount && paidClickCount >= 1) {
         const messages = [
           emoji('red_heart'),
-          `Ти вже натискав на цю кнопку! Не треба так багато разів ${emoji('smile')}`,
-          `Стоп-стоп, я вже записав, що ти заплатив! Навіщо ще раз? ${emoji('thinking')}`,
-          `Окей, я розумію - ти дуже пишаєшся цим платежем ${emoji('sweat_smile')}`,
+          `Ти вже натискав на цю кнопку! Не треба так багато разів ${emoji('slightly_smiling_face')}`,
+          `Стоп-стоп, я вже записав, що ти заплатив! Навіщо ще раз? ${emoji('thinking_face')}`,
+          `Окей, я розумію - ти дуже пишаєшся цим платежем ${emoji('grinning_face_with_sweat')}`,
           `${emoji('angry_face')}`,
           `Ти хочеш заплатити двічі? Банк буде радий, але не треба ${emoji('upside_down_face')}`,
           `Я не забув, обіцяю! Платіж вже в базі ${emoji('thumbs_up')} `,

@@ -4,8 +4,8 @@
   "description": "A lightweight Telegram bot designed to manage and track єОселя mortgage payments",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development tsx watch --tsconfig tsconfig.json src/index.ts",
-    "start": "cross-env NODE_ENV=development node dist/index.js",
+    "dev": "cross-env NODE_ENV=development tsx watch --tsconfig tsconfig.json src/longPolling.ts",
+    "start": "cross-env NODE_ENV=development node dist/longPolling.js",
     "build": "tsc && tsc-alias",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint .",

@@ -13,15 +13,15 @@ module.exports = {
       instances: 1, // pm2 instance count
       autorestart: true, // auto restart if process crash
       watch: false, // files change automatic restart
-      ignore_watch: ['node_modules', 'payday-eoselia_logs'], // ignore files change
+      ignore_watch: ['node_modules', 'logs'], // ignore files change
       max_memory_restart: '1G', // restart if process use more than 1G memory
       merge_logs: true, // if true, stdout and stderr will be merged and sent to pm2 log
-      output: './payday-eoselia_logs/prod.access.log', // pm2 log file
-      error: './payday-eoselia_logs/prod.error.log', // pm2 error log file
+      output: './logs/prod.access.log', // pm2 log file
+      error: './logs/prod.error.log', // pm2 error log file
       time: true,
       env: {
         // environment variable
-        LOG_DIR: '../../payday-eoselia_logs',
+        LOG_DIR: '../../logs',
         NODE_ENV: 'production',
       },
     },

@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "api/webhook.ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    },
+    "api/cron.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "crons": [
+    { "path": "/api/cron?tone=friendly", "schedule": "0 8 10 * *" },
+    { "path": "/api/cron?tone=reminder", "schedule": "0 8 15 * *" },
+    { "path": "/api/cron?tone=warning", "schedule": "0 8 20 * *" },
+    { "path": "/api/cron?tone=urgent", "schedule": "0 8 23 * *" },
+    { "path": "/api/cron?tone=delay", "schedule": "0 9 * * *" }
+  ]
+}

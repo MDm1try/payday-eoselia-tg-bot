@@ -3,8 +3,7 @@ import type { CommandContext } from 'grammy'
 
 import SessionChat from '../engine/SesssionChat'
 import { createMortgageReminder } from '../notifications/sendMortgageReminder'
-
-import type { ChatData, TelegramContext } from '@/types'
+import type { ChatData, TelegramContext } from '../types'
 
 async function handleStart(ctx: CommandContext<TelegramContext>) {
   // stats
@@ -25,10 +24,10 @@ async function handleStart(ctx: CommandContext<TelegramContext>) {
       startChat: new Date(),
       payments: [],
     }
-    ctx.session.chats = [chat]
-    // if (!ctx.session.chats.some((c) => c.id === chat.id)) {
-    //   ctx.session.chats.push(chat)
-    // }
+
+    if (!ctx.session.chats.some((c) => c.id === chat.id)) {
+      ctx.session.chats.push(chat)
+    }
 
     const currentChat = ctx.session.chats.find((c) => c.id === ctx.chat.id)!
     const displayName = currentChat.firstName || currentChat.username

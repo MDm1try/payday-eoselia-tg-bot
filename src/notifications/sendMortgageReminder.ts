@@ -1,10 +1,9 @@
 import { emoji } from '@grammyjs/emoji'
 import { InlineKeyboard } from 'grammy'
 
+import CallbackQueryHandler from '../helpers/CallbackQueryHandler'
+import botApi from '../libs/botApi'
 import type { MortgagePayment, ReminderTone } from '../types'
-
-import CallbackQueryHandler from '@/helpers/CallbackQueryHandler'
-import botApi from '@/libs/botApi'
 
 function formatBalance(amount: number): string {
   return amount.toLocaleString('uk-UA', {

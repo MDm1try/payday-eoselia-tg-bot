@@ -1,8 +1,8 @@
 import { formatDate } from 'date-fns'
 
-import Mortgage from './Mortgage'
+import type { ChatData, MortgagePayment } from '../types'
 
-import type { ChatData, MortgagePayment } from '@/types'
+import Mortgage from './Mortgage'
 
 class SessionChat {
   private chats: ChatData[]

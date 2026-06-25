@@ -17,6 +17,7 @@
 /tg_logs
 /api_logs
 /keys
+/payday-eoselia_logs
 
 # misc
 .DS_Store
@@ -29,9 +30,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env
 .env.development
-.env.test
 .env.production
-ga4-data-api-credentials.json
-env.development
