@@ -13,7 +13,7 @@ export async function processReminders(tone: ReminderTone) {
     for (const key of keys) {
       const session = await storage.read(key)
 
-      if (session.chats.length) {
+      if (session?.chats.length) {
         const chatId = Number(key)
         const sessionChat = new SessionChat(chatId, session.chats)
         const currentPayment = sessionChat.getTargetMonthPayment()
@@ -33,7 +33,7 @@ export async function processReminders(tone: ReminderTone) {
   }
 }
 
-export async function processDeleyedReminders() {
+export async function processDelayedReminders() {
   try {
     const storage = freeStorage<SessionData>(TELEGRAM_TOKEN as string)
     const { keys } = (await storage.readAllKeys()) as any as { keys: string[] }
@@ -41,7 +41,7 @@ export async function processDeleyedReminders() {
     for (const key of keys) {
       const session = await storage.read(key)
 
-      if (session.chats.length) {
+      if (session?.chats.length) {
         const chatId = Number(key)
         const sessionChat = new SessionChat(chatId, session.chats)
         const currentPayment = sessionChat.getTargetMonthPayment()
@@ -52,6 +52,6 @@ export async function processDeleyedReminders() {
       }
     }
   } catch (error) {
-    console.log(`Error in deleyed reminder task:`, error)
+    console.log(`Error in delayed reminder task:`, error)
   }
 }

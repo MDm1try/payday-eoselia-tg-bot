@@ -1,6 +1,6 @@
 import cron from 'node-cron'
 
-import { processDeleyedReminders, processReminders } from './processors'
+import { processDelayedReminders, processReminders } from './processors'
 
 // Send friendly reminder on 10th of month at 11:00
 const task10th = cron.schedule(
@@ -57,7 +57,7 @@ const delayTask = cron.schedule(
     if (today > 20) {
       // Only run after 20th of the month
       console.log('Running delayed reminders task')
-      await processDeleyedReminders()
+      await processDelayedReminders()
     }
   },
   {

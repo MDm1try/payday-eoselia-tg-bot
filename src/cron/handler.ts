@@ -4,7 +4,7 @@ import { URL } from 'url'
 import { CRON_SECRET } from '../config'
 import type { ReminderTone } from '../types'
 
-import { processDeleyedReminders, processReminders } from './processors'
+import { processDelayedReminders, processReminders } from './processors'
 
 const VALID_TONES: ReminderTone[] = ['friendly', 'reminder', 'warning', 'urgent']
 
@@ -23,7 +23,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
   if (tone === 'delay') {
     const day = new Date().getDate()
     if (day > 20) {
-      await processDeleyedReminders()
+      await processDelayedReminders()
       res.writeHead(200, { 'Content-Type': 'application/json' })
       res.end(JSON.stringify({ success: true, tone }))
     } else {
