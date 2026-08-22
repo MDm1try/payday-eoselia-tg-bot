@@ -1,14 +1,17 @@
-import { freeStorage } from '@grammyjs/storage-free'
-
-import { TELEGRAM_TOKEN } from '../config'
 import SessionChat from '../engine/SesssionChat'
+import { RedisAdapterWithKeys } from '../libs/RedisAdapterWithKeys'
+import redisInstance from '../libs/redisInstance'
 import { sendMortgageReminder } from '../notifications'
 import type { ReminderTone, SessionData } from '../types'
 
 export async function processReminders(tone: ReminderTone) {
   try {
-    const storage = freeStorage<SessionData>(TELEGRAM_TOKEN as string)
-    const { keys } = (await storage.readAllKeys()) as any as { keys: string[] }
+    const storage = new RedisAdapterWithKeys<SessionData>(redisInstance)
+
+    const keys = []
+    for await (const key of storage.readAllKeys()) {
+      keys.push(key)
+    }
 
     for (const key of keys) {
       const session = await storage.read(key)
@@ -35,8 +38,12 @@ export async function processReminders(tone: ReminderTone) {
 
 export async function processDelayedReminders() {
   try {
-    const storage = freeStorage<SessionData>(TELEGRAM_TOKEN as string)
-    const { keys } = (await storage.readAllKeys()) as any as { keys: string[] }
+    const storage = new RedisAdapterWithKeys<SessionData>(redisInstance)
+
+    const keys = []
+    for await (const key of storage.readAllKeys()) {
+      keys.push(key)
+    }
 
     for (const key of keys) {
       const session = await storage.read(key)

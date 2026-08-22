@@ -1,18 +1,18 @@
 import { emojiParser } from '@grammyjs/emoji'
-import { freeStorage } from '@grammyjs/storage-free'
 import { Bot, session } from 'grammy'
-import type { StorageAdapter } from 'grammy'
 
 import { handleStart, handleList, handleStatus, handleStop } from './commands'
 import { TELEGRAM_TOKEN } from './config'
 import { handleMessage, handleCallbackData } from './handlers'
 import { unknownError } from './helpers/replayTips'
+import { RedisAdapterWithKeys } from './libs/RedisAdapterWithKeys'
+import redisInstance from './libs/redisInstance'
 import type { SessionData, TelegramContext } from './types'
 
 export function createBot() {
   const bot = new Bot<TelegramContext>(TELEGRAM_TOKEN as string)
 
-  const storage = freeStorage<SessionData>(bot.token) as any as StorageAdapter<SessionData>
+  const storage = new RedisAdapterWithKeys<SessionData>(redisInstance)
 
   bot.use(
     session<SessionData, TelegramContext>({
