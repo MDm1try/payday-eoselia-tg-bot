@@ -10,10 +10,11 @@ import redisInstance from './libs/redisInstance'
 import type { SessionData, TelegramContext } from './types'
 
 export function createBot() {
+  console.log('Creating bot...')
   const bot = new Bot<TelegramContext>(TELEGRAM_TOKEN as string)
 
   const storage = new RedisAdapterWithKeys<SessionData>(redisInstance)
-
+  console.log('Redis storage initialized')
   bot.use(
     session<SessionData, TelegramContext>({
       initial: () => ({
